@@ -14,7 +14,7 @@ public class ScreenshotUtility {
 		TakesScreenshot screenshot=(TakesScreenshot) driver;
 		File SS = screenshot.getScreenshotAs(OutputType.FILE);
 		String ldt = LocalDateTime.now().toString().replace(':', '-');
-		File file=new File("./Screenshot/"+ScreenshotName+" "+ldt+".png");
+		File file=new File("./screenshot"+ScreenshotName+" "+ldt+".png");
 		FileUtils.copyFile(SS, file);
 	}
 }
